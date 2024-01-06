@@ -6,6 +6,7 @@ public class Category {
 
     @Transient
     public static final String shortCode = "CA";
+
     // SequenceGeneratorService.generateSequence(SeasonSubSquad.shortCode);
     public String Id;
     public String Category;
