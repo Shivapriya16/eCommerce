@@ -8,15 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.java.e_commerce.repositories.E_CommerceRepo;
-import com.java.e_commerce.service.ECommerceService;
-
 @RestController
 @RequestMapping(produces = "application/json")
 public class EcommerceController {
-
-    @Autowired
-    E_CommerceRepo eCommerceRepo;
 
     @Autowired
     ReactiveMongoTemplate mongoTemplate;
@@ -25,7 +19,7 @@ public class EcommerceController {
     @PostMapping("/flightDetails")
     public ResponseEntity<?> collectDetails() {
         try {
-            ECommerceService service = new ECommerceService(eCommerceRepo);
+            // ECommerceService service = new ECommerceService(eCommerceRepo);
             // service.SaveInitialData(request);
             return new ResponseEntity<String>(("success"), HttpStatus.OK);
         } catch (Exception ex) {

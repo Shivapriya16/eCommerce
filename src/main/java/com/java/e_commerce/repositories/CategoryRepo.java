@@ -3,9 +3,9 @@ package com.java.e_commerce.repositories;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.java.e_commerce.model.Ecommerce;
+import com.java.e_commerce.models.Category;
 
 @Repository
-public interface E_CommerceRepo extends ReactiveMongoRepository<Ecommerce, String> {
+public interface CategoryRepo extends ReactiveMongoRepository<Category, String> {
 
 }
